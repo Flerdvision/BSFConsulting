@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BSF Consulting AG – Kontakt, Standort & Anfahrt | Gubelstrasse 12, CH-6300 Zug">
+<title>Kontakt & Standort – BSF Consulting AG</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+function openMobMenu(){var m=document.getElementById('mobMenu'),h=document.getElementById('hamBtn');if(m)m.classList.add('open');if(h)h.classList.add('open');document.body.style.overflow='hidden';}
+function closeMobMenu(){var m=document.getElementById('mobMenu'),h=document.getElementById('hamBtn');if(m)m.classList.remove('open');if(h)h.classList.remove('open');document.body.style.overflow='';}
+window.openBooking=function(){var m=document.getElementById('bookingModal');if(m){m.classList.add('open');document.body.style.overflow='hidden';}else{document.addEventListener('DOMContentLoaded',function(){var m2=document.getElementById('bookingModal');if(m2){m2.classList.add('open');document.body.style.overflow='hidden';}});}};
+</script>
+<style>
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}
+.reveal.from-left{transform:translateX(-28px)}
+.reveal.from-right{transform:translateX(28px)}
+.reveal.visible{opacity:1!important;transform:none!important}
+.ci-card{border-radius:16px;padding:1.4rem 1.6rem;gap:1.2rem}
+.ci-card-icon{font-size:1.8rem;flex-shrink:0;width:48px;height:48px;background:var(--fp);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.ci-card:hover .ci-card-icon{transform:scale(1.15) rotate(-5deg)}
+.contact-form-wrap{border-radius:24px;padding:3rem}
+.form-group input,.form-group select,.form-group textarea{border-radius:12px;font-size:.95rem;padding:.9rem 1.1rem;transition:border-color .2s,box-shadow .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--f);box-shadow:0 0 0 3px rgba(26,43,72,.08)}
+.form-submit{border-radius:50px;padding:1.1rem 2rem;font-size:.95rem;letter-spacing:.03em;transition:all .25s cubic-bezier(.22,1,.36,1)}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,43,72,.25)}
+.quick-actions{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.qa-btn{display:flex;align-items:center;gap:10px;padding:1rem 1.2rem;border:1.5px solid var(--bd);border-radius:14px;font-size:.88rem;font-weight:600;color:var(--f);transition:all .25s;background:#fff}
+.qa-btn:hover{border-color:var(--fl);background:var(--fp);transform:translateY(-3px);box-shadow:var(--sh)}
+.qa-icon{font-size:1.3rem}
+@media(max-width:500px){.quick-actions{grid-template-columns:1fr}}
+.form-success{display:none;background:var(--fp);border:1px solid rgba(26,43,72,.3);border-radius:var(--r);padding:1.2rem 1.5rem;margin-top:1rem;color:var(--f);font-weight:600;font-size:.9rem;align-items:center;gap:.6rem}
+.form-success.show{display:flex;animation:panelIn .4s cubic-bezier(.22,1,.36,1) both}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+/* Intro path cards */
+.path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:2.5rem auto 0}
+.path-card{background:#fff;border:1.5px solid var(--bd);border-radius:20px;padding:2rem 1.8rem;text-align:center;transition:all .3s cubic-bezier(.22,1,.36,1)}
+.path-card:hover{border-color:var(--fl);box-shadow:var(--sh);transform:translateY(-4px)}
+.path-icon{font-size:2.4rem;margin-bottom:1rem;display:block}
+.path-lbl{font-weight:700;font-size:1rem;color:var(--f);margin-bottom:.4rem}
+.path-val{font-size:.88rem;color:var(--tl);margin-bottom:1.2rem;line-height:1.5}
+@media(max-width:768px){.path-grid{grid-template-columns:1fr}}
+/* Route cards */
+.route-card{background:#fff;border:1.5px solid var(--bd);border-radius:16px;padding:1.6rem 1.8rem;position:relative;overflow:hidden;transition:all .3s cubic-bezier(.22,1,.36,1)}
+.route-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--bd);border-radius:0 2px 2px 0;transition:background .3s}
+.route-card:hover{box-shadow:var(--sh);transform:translateY(-2px)}
+.route-card:hover::before{background:var(--fl)}
+.route-num{position:absolute;top:1rem;right:1.2rem;font-family:'Lora',serif;font-size:2.5rem;color:var(--bd);font-weight:600;line-height:1;transition:color .3s}
+.route-card:hover .route-num{color:var(--fp2,var(--f))}
+</style>
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div id="page-loader">
+  <div class="ld-logo">BSF <span style="color:var(--el)">Consulting AG</span></div>
+  <div class="ld-tagline">Swiss M&amp;A · Zug · seit 1998</div>
+  <div class="ld-bar"><div class="ld-fill"></div></div>
+</div>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-menu-close" id="mobMenuClose">✕</button>
+  <a href="index.html" onclick="closeMobMenu()">Startseite</a>
+  <a href="stellplaetze.html" onclick="closeMobMenu()">Mandate</a>
+  <a href="preise.html" onclick="closeMobMenu()">Honorar</a>
+  <a href="freizeit.html" onclick="closeMobMenu()">Methode</a>
+  <a href="transaktionsuhr.html" onclick="closeMobMenu()">Transaktionsuhr</a>
+  <a href="kontakt.html" onclick="closeMobMenu()">Kontakt</a>
+  <a href="#" onclick="closeMobMenu();openBooking();return false;" style="color:var(--el)">→ Erstgespräch</a>
+</div>
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <!-- TODO: BSF-Logo einfügen sobald geliefert -->
+      <span class="nav-logo-text">BSF <span>Consulting AG</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="stellplaetze.html">Mandate</a></li>
+      <li><a href="preise.html">Honorar</a></li>
+      <li><a href="freizeit.html">Methode</a></li>
+      <li><a href="transaktionsuhr.html">Transaktionsuhr</a></li>
+      <li><a href="kontakt.html" class="nav-active">Kontakt</a></li>
+      <li><a href="#" onclick="openBooking();return false;" class="nav-book">→ Erstgespräch</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-badge">CH · Zug · seit 1998</div>
+      <button class="ham-btn" id="hamBtn" onclick="openMobMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=2400&q=85')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Kontakt</span>
+    <h1>Wann sprechen wir <em>miteinander?</em></h1>
+    <p class="hero-desc">Schreiben Sie uns über das Formular oder rufen Sie direkt an. Antwort innerhalb eines Werktags.</p>
+    <div class="hero-actions">
+      <a href="#" onclick="openBooking();return false;" class="btn btn-green">Erstgespräch starten</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO: DREI WEGE -->
+<section class="section-wrap bg-cream">
+  <div class="section-wrap-inner" style="text-align:center">
+    <div class="section-tag reveal">Kontaktwege</div>
+    <h2 class="section-title reveal">Drei Wege<br><em>zu uns</em></h2>
+    <p class="section-sub reveal" style="margin:0 auto">Wählen Sie den Weg, der Ihnen am besten passt – alle führen zu einer persönlichen Antwort.</p>
+    <div class="path-grid">
+      <div class="path-card reveal from-left">
+        <span class="path-icon">→</span>
+        <div class="path-lbl">Erstgespräch-Formular</div>
+        <div class="path-val">Strukturiert, vertraulich, innerhalb eines Werktags bestätigt. Auf Wunsch vorab per NDA.</div>
+        <a href="#" onclick="openBooking();return false;" class="btn btn-green" style="display:inline-block;font-size:.85rem;padding:.7rem 1.4rem">Jetzt anfragen</a>
+      </div>
+      <div class="path-card reveal">
+        <span class="path-icon">📞</span>
+        <div class="path-lbl">Telefon</div>
+        <div class="path-val">Direkt persönlich. Montag–Freitag, 8–18 Uhr. Außerhalb der Bürozeiten hinterlassen Sie eine Nachricht.</div>
+        <a href="tel:+41417603616" class="btn btn-green" style="display:inline-block;font-size:.85rem;padding:.7rem 1.4rem">+41 41 760 36 16</a>
+      </div>
+      <div class="path-card reveal from-right">
+        <span class="path-icon">✉️</span>
+        <div class="path-lbl">E-Mail</div>
+        <div class="path-val">Diskret und dokumentiert. Schreiben Sie uns direkt oder nutzen Sie das Formular weiter unten.</div>
+        <a href="mailto:info@bsfconsulting.ch" class="btn btn-green" style="display:inline-block;font-size:.85rem;padding:.7rem 1.4rem">info@bsfconsulting.ch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKTFORMULAR -->
+<section class="contact section-wrap bg-pastel" id="kontakt">
+  <div class="contact-inner">
+    <div style="text-align:center;margin-bottom:3rem">
+      <div class="section-tag reveal">Direkte Nachricht</div>
+      <h2 class="section-title reveal">Schreiben Sie<br><em>uns direkt</em></h2>
+      <p class="section-sub reveal" style="margin:0 auto">Wir antworten vertraulich innerhalb eines Werktags.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal from-left">
+        <div class="ci-cards">
+          <div class="ci-card">
+            <div class="ci-card-icon">📞</div>
+            <div><div class="ci-lbl">Telefon</div><div class="ci-val"><a href="tel:+41417603616" style="color:inherit">+41 41 760 36 16</a></div></div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-card-icon">✉️</div>
+            <div><div class="ci-lbl">E-Mail</div><div class="ci-val"><a href="mailto:info@bsfconsulting.ch" style="color:inherit">info@bsfconsulting.ch</a></div></div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-card-icon">📍</div>
+            <div><div class="ci-lbl">Adresse</div><div class="ci-val">Gubelstrasse 12, CH-6300 Zug</div></div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-card-icon">🤝</div>
+            <div><div class="ci-lbl">Erstgespräch</div><div class="ci-val">Unverbindlich · ca. 45 Min · NDA auf Wunsch</div></div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-card-icon">🔒</div>
+            <div><div class="ci-lbl">Datenschutz</div><div class="ci-val">Alle Angaben streng vertraulich</div></div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-card-icon">🌍</div>
+            <div><div class="ci-lbl">Sprachen</div><div class="ci-val">DE · EN · TR</div></div>
+          </div>
+        </div>
+        <div class="quick-actions">
+          <a href="tel:+41417603616" class="qa-btn"><span class="qa-icon">📞</span>Direkt anrufen</a>
+          <a href="https://maps.google.com/?q=Gubelstrasse+12,+6300+Zug,+Schweiz" target="_blank" class="qa-btn"><span class="qa-icon">📍</span>Karte öffnen</a>
+          <a href="mailto:info@bsfconsulting.ch" class="qa-btn"><span class="qa-icon">✉️</span>E-Mail senden</a>
+          <a href="#" class="qa-btn" onclick="openBooking();return false;"><span class="qa-icon">→</span>Erstgespräch anfragen</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal from-right">
+        <h3>Ihre Nachricht</h3>
+        <p style="margin-bottom:1.8rem">Wir antworten vertraulich innerhalb eines Werktags.</p>
+        <div class="form-row">
+          <div class="form-group"><label>Vorname</label><input type="text" id="c-fname" placeholder="Max"></div>
+          <div class="form-group"><label>Nachname</label><input type="text" id="c-lname" placeholder="Muster"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Unternehmen (optional)</label><input type="text" id="c-company" placeholder="Mustermann GmbH"></div>
+          <div class="form-group"><label>Ihre Funktion (optional)</label><input type="text" id="c-role" placeholder="Geschäftsführer"></div>
+        </div>
+        <div class="form-group"><label>E-Mail *</label><input type="email" id="c-email" placeholder="max@muster.ch"></div>
+        <div class="form-group"><label>Was bewegt Sie? *</label><textarea id="c-msg" placeholder="Kurze Beschreibung Ihres Anliegens..." style="min-height:120px"></textarea></div>
+        <button class="form-submit" id="contactBtn" onclick="submitContact(this)">✉ Nachricht senden</button>
+        <div class="form-success" id="form-success">✅ Ihre Nachricht wurde übermittelt. Wir melden uns innerhalb eines Werktags!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STANDORT & ANFAHRT -->
+<section class="anreise section-wrap bg-paper" id="standort">
+  <div class="anreise-inner">
+    <div>
+      <div class="section-tag reveal">Standort & Anfahrt</div>
+      <h2 class="section-title reveal">Im Herzen<br><em>von Zug</em></h2>
+      <p class="section-sub reveal">Egal ob mit Auto, Bahn oder Flugzeug – wir sind gut erreichbar.</p>
+      <div class="route-list">
+        <div class="route-card reveal from-left">
+          <div class="route-num">01</div>
+          <div class="route-icon">🚗</div>
+          <div><div class="route-lbl">Mit dem Auto</div>
+          <div class="route-text">A4 Richtung Zug, Ausfahrt <strong>Zug-Nord</strong>, dann über die Zugerstrasse zur Gubelstrasse. Parkplätze in der Umgebung vorhanden.</div></div>
+        </div>
+        <div class="route-card reveal from-left">
+          <div class="route-num">02</div>
+          <div class="route-icon">🚂</div>
+          <div><div class="route-lbl">Mit der Bahn</div>
+          <div class="route-text">Direktverbindung ab <strong>Zürich HB</strong> in ca. 40 Minuten zum Bahnhof Zug. Vom Bahnhof zur Gubelstrasse ca. 15 Min. zu Fuß oder Bus.</div></div>
+        </div>
+        <div class="route-card reveal from-left">
+          <div class="route-num">03</div>
+          <div class="route-icon">✈️</div>
+          <div><div class="route-lbl">Ab Flughafen Zürich</div>
+          <div class="route-text">Flughafen Zürich (ZRH): ca. <strong>50 Minuten</strong> mit Bahn oder Auto. Direktzüge via Zürich HB fahren stündlich nach Zug.</div></div>
+        </div>
+        <div class="route-card reveal from-left">
+          <div class="route-num">04</div>
+          <div class="route-icon">🏢</div>
+          <div><div class="route-lbl">Unser Büro</div>
+          <div class="route-text"><strong>Gubelstrasse 12, CH-6300 Zug.</strong> Bitte vereinbaren Sie Ihren Besuch vorab telefonisch oder per E-Mail mit uns.</div></div>
+        </div>
+      </div>
+      <div class="addr-box reveal">
+        <div class="addr-lbl">Adresse</div><div class="addr-val" style="margin-bottom:1rem">Gubelstrasse 12, CH-6300 Zug, Schweiz</div>
+        <div class="addr-lbl">Telefon</div><div class="addr-val" style="margin-bottom:1rem"><a href="tel:+41417603616" style="color:#fff">+41 41 760 36 16</a></div>
+        <div class="addr-lbl">E-Mail</div><div class="addr-val" style="margin-bottom:1.5rem"><a href="mailto:info@bsfconsulting.ch" style="color:#fff">info@bsfconsulting.ch</a></div>
+        <a href="https://maps.google.com/?q=Gubelstrasse+12,+6300+Zug,+Schweiz" target="_blank" class="btn btn-white">📍 In Google Maps öffnen</a>
+      </div>
+    </div>
+    <div class="reveal from-right">
+      <img src="https://images.unsplash.com/photo-1530653333484-8d4ec85c2b81?w=1200&q=85"
+           alt="Zuger Altstadt — BSF Consulting AG, Gubelstrasse 12"
+           style="width:100%;border-radius:var(--r);box-shadow:0 20px 60px rgba(26,43,72,.10);margin-bottom:1.5rem">
+      <div style="text-align:center">
+        <a href="https://maps.google.com/?q=Gubelstrasse+12,+6300+Zug,+Schweiz" target="_blank" class="btn btn-green">📍 In Google Maps öffnen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL / QUOTE -->
+<section class="section-wrap bg-dark" style="text-align:center">
+  <div class="section-wrap-inner-narrow">
+    <div class="section-tag reveal" style="border-color:rgba(212,185,118,.3);color:var(--el)">Unser Versprechen</div>
+    <blockquote class="reveal from-scale" style="font-family:'Lora',serif;font-size:clamp(1.4rem,3vw,2.1rem);color:#fff;line-height:1.55;font-style:italic;margin:1.8rem 0 1.4rem;border:none;padding:0">
+      „Antwort innerhalb eines Werktags.<br><em style="color:var(--el)">Vertraulichkeit selbstverständlich.</em>"
+    </blockquote>
+    <div class="reveal" style="font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);font-weight:700">BSF Consulting AG · Zug · seit 1998</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="cta-banner-bg" style="background-image:url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=2400&q=85')"></div>
+  <div class="cta-banner-overlay"></div>
+  <div class="cta-banner-content reveal">
+    <div class="section-tag" style="justify-content:center;color:var(--el)">Jetzt handeln</div>
+    <h2>Rufen Sie uns<br><em>direkt an</em></h2>
+    <p>Persönlich, diskret, ohne Warteschleife. Wir freuen uns auf Ihr Anliegen.</p>
+    <div class="cta-banner-btns">
+      <a href="tel:+41417603616" class="btn btn-gold">📞 +41 41 760 36 16</a>
+      <a href="#" onclick="openBooking();return false;" class="btn btn-outline-white">→ Erstgespräch anfragen</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" style="text-decoration:none"><div class="fb-logo">BSF <span>Consulting AG</span></div></a>
+      <p>Schweizer M&amp;A-Boutique mit Sitz in Zug. Diskret, strukturiert, mit Erfahrung seit 1998.</p>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.32)">BSF Consulting AG<br>Gubelstrasse 12, CH-6300 Zug<br>+41 41 760 36 16<br>info@bsfconsulting.ch</div>
+    </div>
+    <div class="fc"><h4>Navigation</h4><ul>
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="stellplaetze.html">Mandate</a></li>
+      <li><a href="preise.html">Honorar</a></li>
+      <li><a href="freizeit.html">Methode</a></li>
+      <li><a href="transaktionsuhr.html">Transaktionsuhr</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul></div>
+    <div class="fc"><h4>Leistungen</h4><ul>
+      <li><a href="stellplaetze.html">Unternehmensverkauf</a></li>
+      <li><a href="stellplaetze.html">Unternehmenskauf</a></li>
+      <li><a href="stellplaetze.html">Nachfolge</a></li>
+      <li><a href="stellplaetze.html">Restrukturierung</a></li>
+    </ul></div>
+    <div class="fc"><h4>Rechtliches</h4><ul>
+      <li><a href="#">Impressum</a></li>
+      <li><a href="#">Datenschutz</a></li>
+      <li><a href="#">AGB</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 BSF Consulting AG · Zug · Schweiz</div>
+    <div class="footer-legal"><a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">AGB</a></div>
+  </div>
+</footer>
+
+<script src="reveal.js"></script>
+<script src="booking.js"></script>
+<script src="chatbot.js"></script>
+<script src="subpage.js"></script>
+<script>
+document.getElementById('hamBtn').addEventListener('click', openMobMenu);
+document.getElementById('mobMenuClose').addEventListener('click', closeMobMenu);
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    var h = document.querySelector('#bookingModal .bk-headline');
+    var s = document.querySelector('#bookingModal .bk-subtitle');
+    if (h) h.textContent = 'Erstgespräch anfragen';
+    if (s) s.textContent = 'Vertraulich, unverbindlich, innerhalb eines Werktags';
+  } catch(e) {}
+  try {
+    var cn = document.getElementById('cb-head-name');
+    if (cn) cn.textContent = 'BSF Concierge';
+  } catch(e) {}
+}, false);
+function submitContact(btn){
+  var email=document.getElementById('c-email').value.trim();
+  var msg=document.getElementById('c-msg').value.trim();
+  if(!email||!msg){
+    btn.style.animation='bkShake .4s ease both';
+    setTimeout(function(){btn.style.animation='';},500);
+    return;
+  }
+  var fname=document.getElementById('c-fname').value.trim();
+  var lname=document.getElementById('c-lname').value.trim();
+  var company=document.getElementById('c-company').value.trim();
+  var role=document.getElementById('c-role').value.trim();
+  var subject='BSF-Anfrage'+(fname?' – '+fname+' '+lname:'');
+  var body='Name: '+(fname+' '+lname).trim()+'\nE-Mail: '+email+'\n';
+  if(company)body+='Unternehmen: '+company+'\n';
+  if(role)body+='Funktion: '+role+'\n';
+  body+='\nNachricht:\n'+msg;
+  window.location.href='mailto:info@bsfconsulting.ch?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  var succ=document.getElementById('form-success');
+  succ.classList.add('show');
+  btn.textContent='✓ Gesendet';
+  btn.style.background='var(--fl)';
+  setTimeout(function(){btn.textContent='✉ Nachricht senden';btn.style.background='';},3500);
+}
+(function(){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+  },{threshold:.06,rootMargin:'0px 0px 60px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el,i){
+    if(!el.style.transitionDelay)el.style.transitionDelay=(i%8*.065)+'s';
+    obs.observe(el);
+  });
+  setTimeout(function(){
+    document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){
+      if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('visible');
+    });
+  },120);
+})();
+</script>
+<script>
+(function(){
+  var loader=document.getElementById('page-loader');
+  if(!loader)return;
+  if(sessionStorage.getItem('bsf_loader_shown')){loader.style.display='none';return;}
+  sessionStorage.setItem('bsf_loader_shown','1');
+  var minDisplayTime=1500,maxDisplayTime=3500,startTime=Date.now(),hidden=false;
+  function hideLoader(){
+    if(hidden)return;hidden=true;
+    var remaining=Math.max(0,minDisplayTime-(Date.now()-startTime));
+    setTimeout(function(){
+      loader.classList.add('hidden');
+      setTimeout(function(){if(loader&&loader.parentNode)loader.style.display='none';},700);
+    },remaining);
+  }
+  if(document.readyState==='complete'){hideLoader();}
+  else{
+    window.addEventListener('load',hideLoader);
+    document.addEventListener('DOMContentLoaded',function(){setTimeout(hideLoader,500);});
+  }
+  setTimeout(hideLoader,maxDisplayTime);
+})();
+</script>
+</body>
+</html>
